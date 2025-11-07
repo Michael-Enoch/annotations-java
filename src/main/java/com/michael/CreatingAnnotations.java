@@ -1,6 +1,9 @@
 package com.michael;
 
+import com.michael.annotation.RunImmediately;
 import com.michael.annotation.VeryImportant;
+
+import java.lang.reflect.Method;
 
 public class CreatingAnnotations {
     static void main(String[] args) {
@@ -11,5 +14,9 @@ public class CreatingAnnotations {
         }else {
             System.out.println("This thing is not very important");
         };
+
+        for (Method method: myCat.getClass().getDeclaredMethods()){
+            method.isAnnotationPresent(RunImmediately.class);
+        }
     }
 }
