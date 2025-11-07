@@ -10,7 +10,7 @@ public class Cat {
     public Cat(String name){
         this.name = name;
     }
-@RunImmediately
+    @RunImmediately
     public void meow(){
         System.out.println(this.name + "Meows !");
     }
